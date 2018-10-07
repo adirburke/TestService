@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service RMSServiceLink {
+	rpc GetTask (CheckTaskDto) returns (RMSTaskDto) {}
+}
+
+message CheckTaskDto {
+  int64 resId = 1;
+  string date = 2;
+}
+
+message RMSTaskDto {
+	string task = 1;
+}
+	
